@@ -53,3 +53,47 @@ number = 121
 square_root = math.sqrt(number)
 print(square_root)
 
+# Strings
+# Given the string 'hello' give an index command that returns 'e'. Enter your code in the cell below:
+
+s = 'hello'
+# Print out 'e' using indexing
+
+s[1]
+
+# Reverse the string 'hello' using slicing:
+
+s ='hello'
+# Reverse the string using slicing
+
+s[::-1]
+
+# Given the string hello, give two methods of producing the letter 'o' using indexing.
+
+s ='hello'
+# Print out the 'o'
+# Method 1:
+
+s[4]
+
+# Method 2:
+
+s[-1]
+
+# Lists
+#Build this list [0,0,0] two separate ways.
+
+# Method 1:
+
+list1 = []
+
+for i in range(3):
+    list1.append(0)
+    
+list1
+
+# Method 2:
+
+list_2 = [0 for i in range(3)]
+
+list_2
