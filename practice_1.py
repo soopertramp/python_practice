@@ -16,3 +16,11 @@
 
 #Hint: This is just to test your memory of the basic arithmetic commands, work backwards from 100.25
 
+x = 100
+y = 10
+z = 1
+a = 4
+
+c = (x ** 2) / y + (z/a)
+
+
