@@ -16,12 +16,16 @@
 
 #Hint: This is just to test your memory of the basic arithmetic commands, work backwards from 100.25
 
-x = 100
-y = 10
+# pemdas
+
+x = 10
+y = 1
 z = 1
 a = 4
 
 c = (x ** 2) / y + (z/a)
+
+print(c)
 
 # Answer these 3 questions without typing code. Then type code to check your answer.
 
@@ -92,8 +96,90 @@ for i in range(3):
     
 list1
 
+list3 = [0]*3
+print(list3)
+
 # Method 2:
 
 list_2 = [0 for i in range(3)]
 
 list_2
+
+# Reassign 'hello' in this nested list to say 'goodbye' instead:
+
+list3 = [1,2,[3,4,'hello']]
+
+list3[2][2] = "goodbye"
+
+list3
+
+# Sort the list below:
+
+list4 = [5,3,4,6,1]
+
+list5 = list4.sort()
+
+list4
+
+list5 = [5,3,4,6,1]
+
+print(list5)
+
+s = sorted(list5)
+
+sorted([5, 2, 3, 1, 4])
+
+print(list5)
+
+#Dictionaries¶
+# Using keys and indexing, grab the 'hello' from the following dictionaries:
+
+d = {'simple_key':'hello'}
+# Grab 'hello'
+
+d['simple_key']
+
+d = {'k1':{'k2':'hello'}}
+# Grab 'hello'
+
+d['k1']['k2']
+
+# Getting a little tricker
+d = {'k1':[{'nest_key':['this is deep',['hello']]}]}
+
+#Grab hello
+
+d['k1'][0]['nest_key'][1][0]
+
+# This will be hard and annoying!
+
+d = {'k1':[1,2,{'k2':['this is tricky',{'tough':[1,2,['hello']]}]}]}
+
+d['k1'][2]['k2'][1]['tough'][2][0]
+
+tupl = (1,2,'pradeep')
+
+# Use a set to find the unique values of the list below:
+
+list5 = [1,2,2,33,4,4,11,22,3,3,2]
+
+set(list5)
+
+2 > 3
+
+3 <= 2
+
+3 == 2.0
+
+3.0 == 3
+
+4**0.5 != 2
+
+# What is the boolean output of the cell block below?
+
+# two nested lists
+l_one = [1,2,[3,4]]
+l_two = [1,2,{'k1':4}]
+
+# True or False?
+l_one[2][0] >= l_two[2]['k1']
