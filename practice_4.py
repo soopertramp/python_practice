@@ -107,6 +107,13 @@ Sample List : [1, 2, 3, -4]
 Expected Output : -24 """
 
 def multiply (numbers):
+    
+    """Write a Python function
+    
+    Returns:
+        to multiply all the numbers in a list
+    """
+    
     product = 1
     for i in numbers:
         product = product * i
@@ -115,6 +122,13 @@ def multiply (numbers):
 multiply([1,2,3,-4])
 
 def multiply (numbers):
+    
+    """Write a Python function
+    
+    Returns:
+        to multiply all the numbers in a list
+    """
+    
     product = 1
     for i in numbers:
         product = product * i
@@ -130,6 +144,13 @@ method in a string to help out with dealing with spaces. Also google search how 
 in Python, there are some clever ways to do it with slicing notation. """
 
 def palindrome(s):
+    
+    """Write a Python function that checks whether a word or phrase is palindrome or not
+
+    Returns:
+        checks whether a word or phrase is palindrome or not
+    """    
+
     if s[::-1] == s[::]:
         print(s)
     else:
@@ -157,5 +178,33 @@ Hint: Look at the (string method)[https://stackoverflow.com/questions/16060899/a
 
 Hint: In case you want to use (set comparisons)[https://betterprogramming.pub/a-visual-guide-to-set-comparisons-in-python-6ab7edb9ec41] """
 
+import string
 
+def ispangram(str1, alphabet=string.ascii_lowercase):
+    
+    """Write a Python function to check whether a string is pangram or not
 
+    Returns:
+        A string is pangram or not
+    """
+    
+    str1 = str1.lower()
+    return set(alphabet) <= set(str1)
+
+ispangram("The quick brown fox jumps over the lazy dog")
+
+def is_pangram(sentence):
+    
+    """Write a Python function to check whether a string is pangram or not
+
+    Returns:
+        A string is pangram or not
+    """
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    sentence = sentence.lower()
+    for char in alphabet:
+        if char not in sentence:
+            return False
+    return True
+
+is_pangram("The quick brown fox jumps over the lazy dog")
