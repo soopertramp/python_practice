@@ -153,7 +153,7 @@ Note : Pangrams are words or sentences containing every letter of the alphabet a
 For example : "The quick brown fox jumps over the lazy dog"
 Hint: You may want to use .replace() method to get rid of spaces.
 
-Hint: Look at the (string method)[https://stackoverflow.com/questions/16060899/alphabet-range-in-python]
+Hint: Look at the (string method)[https://stackoverflow.com/questions/16060899/alphabet-range-in-python] 
 
 Hint: In case you want to use (set comparisons)[https://betterprogramming.pub/a-visual-guide-to-set-comparisons-in-python-6ab7edb9ec41] """
 
