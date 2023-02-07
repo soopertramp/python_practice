@@ -99,4 +99,89 @@ almost_there(209) --> True
 NOTE: abs(num) returns the absolute value of a number """
 
 def almost_there(n):
+    return abs(n - 100) <= 10 or abs(n - 200) <= 10
+
+almost_there(90)
+
+almost_there(104)
+
+almost_there(150)
+
+almost_there(209)
+
+""" LEVEL 2 PROBLEMS
+FIND 33:
+Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
+
+has_33([1, 3, 3]) → True
+has_33([1, 3, 1, 3]) → False
+has_33([3, 1, 3]) → False """
+
+## Doubts
+
+def has_33(nums):
+    for num in range(len(nums) - 1):
+        if nums[num] == 3 and nums[num + 1] == 3:
+            return True
+    return False
     
+has_33([1, 3, 3])
+
+has_33([1, 3, 1, 3])
+
+has_33([3, 1, 3])
+
+""" PAPER DOLL: Given a string, return a string where for every character in the original 
+there are three characters
+paper_doll('Hello') --> 'HHHeeellllllooo'
+paper_doll('Mississippi') --> 'MMMiiissssssiiippppppiii' """
+
+def paper_doll(text):
+    for char in text.split():
+        for char in text:
+            print(char*3)
+
+paper_doll('Hello')
+
+paper_doll('Mississippi')
+
+""" BLACKJACK: Given three integers between 1 and 11, if their sum is less than or equal to 21, 
+return their sum. If their sum exceeds 21 and there's an eleven, reduce the total sum by 10. 
+Finally, if the sum (even after adjustment) exceeds 21, return 'BUST'
+blackjack(5,6,7) --> 18
+blackjack(9,9,9) --> 'BUST'
+blackjack(9,9,11) --> 19 """
+
+def blackjack(a,b,c):
+    #for i in a,b,c:
+        if (a+b+c) <= 21:
+            return (a+b+c)
+        elif (a+b+c) > 21 and (a+b+c) == 11:
+            return (a+b+c) - 10
+        elif (a+b+c) > 21:
+            return "Bust"
+ 
+blackjack(5,6,7)   
+
+blackjack(9,9,9)  
+
+blackjack(9,9,11) 
+
+# Doubt 1 - For loop and last condition 
+# Doubt 2 - 
+
+def blackjack(a,b,c):
+    total = a + b + c
+    if total <= 21:
+        return total
+    elif 11 in [a,b,c] and total <= 31:
+        return total - 10
+    else:
+        return "Bust"     
+    
+blackjack(5,6,7)   
+
+blackjack(9,9,9)  
+
+blackjack(9,9,11)
+
