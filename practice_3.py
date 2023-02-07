@@ -13,6 +13,14 @@ lesser_of_two_evens(2,4) --> 2
 lesser_of_two_evens(2,5) --> 5 """
 
 def lesser_of_two_evens(a,b):
+    
+    """LESSER OF TWO EVENS
+
+    Returns:
+        returns the lesser of two given numbers if both numbers are even, 
+        but returns the greater if one or both numbers are odd
+    """
+    
     if a % 2 == 0 and b % 2 == 0:
         return min(a,b)
     else:
@@ -29,6 +37,14 @@ animal_crackers('Levelheaded Llama') --> True
 animal_crackers('Crazy Kangaroo') --> False """
 
 def animal_crackers(text):
+    
+    """A function takes a two-word string
+
+    Returns:
+        returns True if both words begin with 
+        same letter
+    """
+    
     texts = text.split()
     return texts[0][0] == texts[1][0]
         
@@ -43,6 +59,14 @@ makes_twenty(12,8) --> True
 makes_twenty(2,3) --> False """
 
 def makes_twenty(n1,n2):
+    
+    """MAKES TWENTY: Given two integers
+
+    Returns:
+        returns True if the sum of the integers is 20 or if one of the 
+        integers is 20. If not, return False
+    """
+    
     return n1 + n2 == 20
         
     
@@ -60,6 +84,13 @@ old_macdonald('macdonald') --> MacDonald
 Note: 'macdonald'.capitalize() returns 'Macdonald' """
 
 def old_macdonald(name):
+    
+    """A function that capitalizes the first and fourth letters of a name
+
+    Returns:
+        old_macdonald('macdonald') --> MacDonald
+    """
+    
     if len(name) < 4:
         return name.capitalize()
     else:
@@ -84,6 +115,14 @@ with a single space string:
 >>> "Hello world" """
 
 def master_yoda(text):
+    
+    """MASTER YODA: Give a sentence
+
+    Returns:
+        Returns a sentence with the words reversed
+        master_yoda('I am home') --> 'home am I'
+    """
+    
     words = text.split()
     return " ".join(words[::-1])
     
@@ -99,6 +138,17 @@ almost_there(209) --> True
 NOTE: abs(num) returns the absolute value of a number """
 
 def almost_there(n):
+    
+    """ALMOST THERE: Given an integer n
+
+    Returns:
+        return True if n is within 10 of either 100 or 200
+        almost_there(90) --> True
+        almost_there(104) --> True
+        almost_there(150) --> False
+        almost_there(209) --> True
+    """
+    
     return abs(n - 100) <= 10 or abs(n - 200) <= 10
 
 almost_there(90)
@@ -120,6 +170,13 @@ has_33([3, 1, 3]) → False """
 ## Doubts
 
 def has_33(nums):
+    
+    """Given a list of ints
+
+    Returns:
+        return True if the array contains a 3 next to a 3 somewhere.
+    """
+    
     for num in range(len(nums) - 1):
         if nums[num] == 3 and nums[num + 1] == 3:
             return True
@@ -137,6 +194,14 @@ paper_doll('Hello') --> 'HHHeeellllllooo'
 paper_doll('Mississippi') --> 'MMMiiissssssiiippppppiii' """
 
 def paper_doll(text):
+    
+    """PAPER DOLL: Given a string
+    
+       Returns:
+       Returns a string where for every character in the original 
+       there are three characters
+    """
+    
     for char in text.split():
         for char in text:
             print(char*3)
@@ -217,6 +282,14 @@ SPY GAME: Write a function that takes in a list of integers and returns True if 
 #             return True
 
 def spy_game(nums):
+    
+    """SPY GAME: Write a function that takes in a list of integers
+
+    Returns:
+        eturns True if it contains 007 in order
+        spy_game([1,2,4,0,0,7,5]) --> True
+    """
+    
     code = [0,0,7,'x']
     for num in nums:
         if num == code[0]:
@@ -235,6 +308,15 @@ count_primes(100) --> 25
 By convention, 0 and 1 are not prime. """
 
 def count_primes(num):
+    
+    """COUNT PRIMES: Write a function
+
+    Returns:
+        Returns the number of prime numbers 
+        that exist up to and including a given number
+        count_primes(100) --> 25
+    """
+    
     if num < 2:
         return 0
     primes = [True] * (num + 1)
@@ -263,6 +345,15 @@ HINT: Consider making a dictionary of possible patterns, and mapping the alphabe
 For purposes of this exercise, it's ok if your dictionary stops at "E". """
 
 def print_big(letter):
+    
+    """PRINT BIG: Write a function that takes in a single letter
+    
+       Returns:
+            Returns a 5x5 representation 
+            of that letter print_big('a')
+
+    """
+    
     patterns = {
         'a': ['  *  ', ' * * ', '*****', '*   *', '*   *'],
         'b': ['**** ', '*   *', '**** ', '*   *', '**** '],
