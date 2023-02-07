@@ -279,3 +279,8 @@ def print_big(letter):
         print('This letter is not supported.')
         
 print_big('b')
+
+s = {'a': ['  *  ', ' * * ', '*****', '*   *', '*   *']}
+
+for a in s:
+    print(s["a"])
