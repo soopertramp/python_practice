@@ -101,4 +101,61 @@ def unique_list(lst):
     
 unique_list([1,1,1,1,2,2,3,3,3,3,4,5])
 
+""" Write a Python function to multiply all the numbers in a list.
+
+Sample List : [1, 2, 3, -4]
+Expected Output : -24 """
+
+def multiply (numbers):
+    product = 1
+    for i in numbers:
+        product = product * i
+        print(product)
+        
+multiply([1,2,3,-4])
+
+def multiply (numbers):
+    product = 1
+    for i in numbers:
+        product = product * i
+    return product
+        
+multiply([1,2,3,-4])
+
+""" Write a Python function that checks whether a word or phrase is palindrome or not.
+
+Note: A palindrome is word, phrase, or sequence that reads the same backward as forward, 
+e.g., madam,kayak,racecar, or a phrase "nurses run". Hint: You may want to check out the .replace() 
+method in a string to help out with dealing with spaces. Also google search how to reverse a string
+in Python, there are some clever ways to do it with slicing notation. """
+
+def palindrome(s):
+    if s[::-1] == s[::]:
+        print(s)
+    else:
+        print('Invalid')
+        
+palindrome('helleh')
+
+palindrome('pradeep')
+
+def palindrome(s):
+    return s[::-1] == s[::]
+
+palindrome('helleh')
+
+palindrome('pradeep')
+
+""" Write a Python function to check whether a string is pangram or not. 
+(Assume the string passed in does not have any punctuation)
+
+Note : Pangrams are words or sentences containing every letter of the alphabet at least once.
+For example : "The quick brown fox jumps over the lazy dog"
+Hint: You may want to use .replace() method to get rid of spaces.
+
+Hint: Look at the (string method)[https://stackoverflow.com/questions/16060899/alphabet-range-in-python]
+
+Hint: In case you want to use (set comparisons)[https://betterprogramming.pub/a-visual-guide-to-set-comparisons-in-python-6ab7edb9ec41] """
+
+
 
