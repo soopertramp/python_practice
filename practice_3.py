@@ -185,3 +185,97 @@ blackjack(9,9,9)
 
 blackjack(9,9,11)
 
+""" SUMMER OF '69: Return the sum of the numbers in the array, except ignore sections of numbers starting 
+with a 6 and extending to the next 9 (every 6 will be followed by at least one 9). Return 0 for no numbers.
+summer_69([1, 3, 5]) --> 9
+summer_69([4, 5, 6, 7, 8, 9]) --> 9
+summer_69([2, 1, 6, 9, 11]) --> 14 """
+
+# def summer_of_69(arr):
+#     sum = 0
+#     add = True
+#     for num in arr:
+#         if num == 6:
+#             add = False
+#         if add:
+#             sum += num
+#         if num == 9:
+#             add = True
+#     return sum
+    
+# summer_69([1, 3, 5])
+
+""" CHALLENGING PROBLEMS
+SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
+ spy_game([1,2,4,0,0,7,5]) --> True
+ spy_game([1,0,2,4,0,5,7]) --> True
+ spy_game([1,7,2,0,4,5,0]) --> False """
+ 
+# def spy_game(nums):
+#     for num in nums:
+#         if [0,0,7] in nums:
+#             return True
+
+def spy_game(nums):
+    code = [0,0,7,'x']
+    for num in nums:
+        if num == code[0]:
+            code.pop(0)
+    return len(code) == 1
+        
+spy_game([1,2,4,0,0,7,5])
+
+spy_game([1,0,2,4,0,5,7])
+
+spy_game([1,7,2,0,4,5,0])
+
+""" COUNT PRIMES: Write a function that returns the number of prime numbers 
+that exist up to and including a given number
+count_primes(100) --> 25
+By convention, 0 and 1 are not prime. """
+
+def count_primes(num):
+    if num < 2:
+        return 0
+    primes = [True] * (num + 1)
+    p = 2
+    while p ** 2 <= num:
+        if primes[p]:
+            for i in range(p ** 2, num + 1, p):
+                primes[i] = False
+        p = p + 1
+    return sum(primes[2:])
+
+count_primes(100)
+
+count_primes(1000)
+
+""" Just for fun:
+PRINT BIG: Write a function that takes in a single letter, and returns a 5x5 representation 
+of that letter print_big('a')
+
+out:   *  
+      * *
+     *****
+     *   *
+     *   *
+HINT: Consider making a dictionary of possible patterns, and mapping the alphabet to specific 5-line combinations of patterns.
+For purposes of this exercise, it's ok if your dictionary stops at "E". """
+
+def print_big(letter):
+    patterns = {
+        'a': ['  *  ', ' * * ', '*****', '*   *', '*   *'],
+        'b': ['**** ', '*   *', '**** ', '*   *', '**** '],
+        'c': [' *** ', '*    ', '*    ', '*    ', ' *** '],
+        'd': ['**** ', '*   *', '*   *', '*   *', '**** '],
+        'e': ['*****', '*    ', '*****', '*    ', '*****'],
+    }
+    alphabet = 'abcde'
+    letter = letter.lower()
+    if letter in alphabet:
+        for pattern in patterns[letter]:
+            print(pattern)
+    else:
+        print('This letter is not supported.')
+        
+print_big('b')
