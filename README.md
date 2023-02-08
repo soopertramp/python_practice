@@ -6,13 +6,13 @@ This repository is dedicated to providing resources and exercises for those look
 ## Content
 This repository contains a collection of exercises, examples, and challenges, covering various aspects of the Python language, including:
 
--- Basic syntax and data types
--- Functions and control flow
--- Object-Oriented Programming
--- File handling and data manipulation
--- Testing and debugging
--- Best practices and design patterns
--- Each topic is presented in its own directory, along with explanations, examples, and exercises for you to work through.
+- [ ] Basic syntax and data types
+- [ ] Functions and control flow
+- [ ] Object-Oriented Programming
+- [ ] File handling and data manipulation
+- [ ] Testing and debugging
+- [ ] Best practices and design patterns
+- [ ] Each topic is presented in its own directory, along with explanations, examples, and exercises for you to work through.
 
 ## Requirements
 To use this repository, you will need a basic understanding of programming concepts, and a recent version of Python installed on your machine.
