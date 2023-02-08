@@ -1,4 +1,4 @@
-# Python Practice
+# Python Practice - [LinkedIn](https://www.linkedin.com/in/pradeepchandra-reddy-s-c/)
 
 ## Python Practice Repository :snake:
 This repository is dedicated to providing resources and exercises for those looking to improve their Python skills. Whether you are a beginner just starting out, or an experienced programmer looking to sharpen your skills, you will find something here that will help you.
