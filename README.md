@@ -3,7 +3,7 @@
 ## Python Practice Repository :snake:
 This repository is dedicated to providing resources and exercises for those looking to improve their Python skills. Whether you are a beginner just starting out, or an experienced programmer looking to sharpen your skills, you will find something here that will help you.
 
-## Content :book:
+## Content :book: 
 This repository contains a collection of exercises, examples, and challenges, covering various aspects of the Python language, including:
 
 - [ ] Basic syntax and data types

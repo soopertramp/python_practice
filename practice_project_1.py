@@ -30,7 +30,7 @@ print("Guess the correct number between 1 and 100")
 #Create a list to store guesses
 #Hint: zero is a good placeholder value. It's useful because it evaluates to "False"
 
-empty = 0
+empty = 0 
 
 #Write a while loop that asks for a valid guess. Test it a few times to make sure it works.
 

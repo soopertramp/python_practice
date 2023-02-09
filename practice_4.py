@@ -207,4 +207,4 @@ def is_pangram(sentence):
             return False
     return True
 
-is_pangram("The quick brown fox jumps over the lazy dog") 
+is_pangram("The quick brown fox jumps over the lazy dog")  
