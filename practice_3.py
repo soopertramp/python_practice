@@ -181,6 +181,13 @@ def has_33(nums):
         if nums[num] == 3 and nums[num + 1] == 3:
             return True
     return False
+
+
+# nums = list(range(0,5))
+# len(nums)
+   
+# for num in range(len(nums)):
+#     print(num)
     
 has_33([1, 3, 3])
 
@@ -219,13 +226,13 @@ blackjack(9,9,11) --> 19 """
 
 def blackjack(a,b,c):
     #for i in a,b,c:
-        if (a+b+c) <= 21:
-            return (a+b+c)
-        elif (a+b+c) > 21 and (a+b+c) == 11:
-            return (a+b+c) - 10
-        elif (a+b+c) > 21:
+        if sum((a,b,c)) <= 21:
+            return sum((a,b,c))
+        elif sum((a,b,c)) > 21 and 11 in (a,b,c):
+            return sum((a,b,c)) - 10
+        else:
             return "Bust"
- 
+
 blackjack(5,6,7)   
 
 blackjack(9,9,9)  
@@ -256,19 +263,19 @@ summer_69([1, 3, 5]) --> 9
 summer_69([4, 5, 6, 7, 8, 9]) --> 9
 summer_69([2, 1, 6, 9, 11]) --> 14 """
 
-# def summer_of_69(arr):
-#     sum = 0
-#     add = True
-#     for num in arr:
-#         if num == 6:
-#             add = False
-#         if add:
-#             sum += num
-#         if num == 9:
-#             add = True
-#     return sum
+def summer_of_69(arr):
+    sum = 0
+    add = True
+    for num in arr:
+        if num == 6:
+            add = False
+        if add:
+            sum += num
+        if num == 9:
+            add = True
+    return sum
     
-# summer_69([1, 3, 5])
+summer_69([1, 3, 5])
 
 """ CHALLENGING PROBLEMS
 SPY GAME: Write a function that takes in a list of integers and returns True if it contains 007 in order
@@ -276,11 +283,12 @@ SPY GAME: Write a function that takes in a list of integers and returns True if 
  spy_game([1,0,2,4,0,5,7]) --> True
  spy_game([1,7,2,0,4,5,0]) --> False """
  
-# def spy_game(nums):
-#     for num in nums:
-#         if [0,0,7] in nums:
-#             return True
-
+def spy_game(nums):
+    s = [0,0,7]
+    for num in nums:
+        if [0,0,7] in nums:
+            return True
+        
 def spy_game(nums):
     
     """SPY GAME: Write a function that takes in a list of integers
