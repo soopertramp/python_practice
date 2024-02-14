@@ -1,6 +1,6 @@
 # Python Practice - [LinkedIn](https://www.linkedin.com/in/pradeepchandra-reddy-s-c/)
 
-## Credits - [Mitul Patel MSc - The Data Science Show](https://www.linkedin.com/in/mitul-patel2393/)
+## Credits - [Mitul Patel MSc - Data To Production](https://www.linkedin.com/in/mitul-patel2393/)
 
 ## Python Practice Repository :snake:
 This repository is dedicated to providing resources and exercises for those looking to improve their Python skills. Whether you are a beginner just starting out, or an experienced programmer looking to sharpen your skills, you will find something here that will help you.
